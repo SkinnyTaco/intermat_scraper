@@ -1,6 +1,6 @@
 require "intermat_scrape/version"
+require "open-uri"
 
-module IntermatScrape
-  class Error < StandardError; end
-  # Your code goes here...
+class IntermatScrape
+  
 end
