@@ -1,4 +1,4 @@
-require "intermat_scrape/version"
+require "../config/environment.rb"
 
 module IntermatScrape
   class Error < StandardError; end
