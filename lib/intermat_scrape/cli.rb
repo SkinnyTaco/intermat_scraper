@@ -75,11 +75,10 @@ class IntermatScrape::Cli
       puts 'Invalid command. Please type a valid command.'
       command = gets.strip.downcase
     end
-
   end
 
   def quit_scraper
-    puts "Thank you for using IntermatScrape!"
+    puts 'Thank you for using IntermatScrape!'
     exit
   end
 end

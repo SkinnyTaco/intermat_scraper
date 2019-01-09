@@ -23,7 +23,7 @@ class IntermatScrape::Wrestler
 
   def to_s
     puts ""
-    puts "----------- #{self.name} - #{self.rank} -----------"
+    puts "----------- #{self.name}  ##{self.rank} -----------"
     puts ""
     puts "School:           #{self.school}"
     puts "Class:          #{self.class_standing}"
