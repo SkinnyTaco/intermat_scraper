@@ -36,7 +36,7 @@ class IntermatScrape::Cli
     puts ''
     puts "Type one of the following commands for the #{weight_class.weight} pound weight class:"
     puts 'rankings(r): show top 20 wrestlers'
-    puts 'back(b): return to main screen'
+    puts 'back(b): return to weight classes'
     command = gets.strip.downcase
     until %w[rankings r back b].include?(command)
       puts 'Invalid command. Please type a valid command.'
@@ -54,7 +54,6 @@ class IntermatScrape::Cli
     puts 'Type one of the following commands:'
     puts 'a number 1-20 to view the corresponding wrestler'
     puts 'back(b): return to weight classes'
-    puts 'main(m): return to main screen'
     command = gets.strip.downcase
     until %w[1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 back b main m].include?(command)
       puts 'Invalid command. Please enter a valid command.'
@@ -66,6 +65,15 @@ class IntermatScrape::Cli
       weight_class.get_wrestler_by_rank(command).to_s
     when 'back', 'b'
       start
+    end
+
+    puts 'Would you like to do now?'
+    puts 'view(v): view another wrestler from this weight class'
+    puts 'back(b): return to weight classes'
+    command = gets.strip.downcase
+    until %w[view v back b].include?(command)
+      puts 'Invalid command. Please type a valid command.'
+      command = gets.strip.downcase
     end
 
   end
