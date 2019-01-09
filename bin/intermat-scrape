@@ -2,4 +2,4 @@
 
 require_relative "../lib/intermat_scrape"
 
-IntermatScrape::Scraper.new.get_doc
+IntermatScrape::Cli.new.flow
