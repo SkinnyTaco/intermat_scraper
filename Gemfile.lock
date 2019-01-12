@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    intermat_scrape (0.1.0)
+    intermat-scrape (0.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -37,7 +37,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.17)
   colorize (~> 0.8)
-  intermat_scrape!
+  intermat-scrape!
   nokogiri (~> 1.10)
   pry (~> 0.12)
   rake (~> 10.0)

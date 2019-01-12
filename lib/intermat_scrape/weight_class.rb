@@ -12,12 +12,12 @@ class IntermatScrape::WeightClass
     @@all << self
   end
 
-    def self.create_weight_classes
-      WEIGHT_CLASSES.each do |weight|
-        new(weight)
-      end
-      @@all
+  def self.create_weight_classes
+    WEIGHT_CLASSES.each do |weight|
+      new(weight)
     end
+    @@all
+  end
 
   def self.print_weights
     puts WEIGHT_CLASSES
@@ -32,11 +32,12 @@ class IntermatScrape::WeightClass
     wrestler.weight_class = self
   end
 
-  #TODO move to Wrestler class
+  #TODO move to Wrestler class?
   def print_wrestlers
     @wrestlers.each.with_index { |w, i| puts "#{w.rank}\t\t#{w.name}"}
   end
 
+  #TODO move to Wrestler class?
   def get_wrestler_by_rank(rank)
     @wrestlers.detect { |w| w.rank == rank }
   end
