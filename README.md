@@ -1,15 +1,15 @@
 # IntermatScrape
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/intermat_scrape`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Extracting data from InterMat, intermat-scrape gives the user the power
+to easily extract weight class rankings, and basic information about ranked
+wrestlers.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'intermat_scrape'
+gem 'intermat-scrape'
 ```
 
 And then execute:
@@ -18,11 +18,12 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install intermat_scrape
+    $ gem install intermat-scrape
 
 ## Usage
 
-TODO: Write usage instructions here
+Simply follow the command prompts to use the interface. Typing exit at any time
+will exit the program.
 
 ## Development
 
@@ -32,7 +33,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/intermat_scrape. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/SkinnyTaco/intermat_scrape. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -40,4 +41,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the IntermatScrape project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/intermat_scrape/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the IntermatScrape project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/SkinnyTaco/intermat_scrape/blob/master/CODE_OF_CONDUCT.md).
