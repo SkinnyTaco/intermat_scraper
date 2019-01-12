@@ -52,7 +52,7 @@ class IntermatScrape::Cli
     end
 
     puts ''
-    puts "Type one of the following commands:"
+    puts 'Type one of the following commands:'
     puts 'rankings(r): show top 20 wrestlers'
     puts 'back(b): return to weight classes'
     puts 'exit: exit program'

@@ -1,8 +1,7 @@
 class IntermatScrape::WeightClass
-
   attr_accessor :wrestlers, :weight
 
-  WEIGHT_CLASSES = ["125","133","141","149","157","165","174","184","197","Hwt"]
+  WEIGHT_CLASSES = %w[125 133 141 149 157 165 174 184 197 Hwt].freeze
 
   @@all = []
 
@@ -24,7 +23,7 @@ class IntermatScrape::WeightClass
   end
 
   def self.find_by_weight(weight)
-    @@all.detect { |w| w.weight == weight}
+    @@all.detect { |w| w.weight == weight }
   end
 
   def add_wrestler(wrestler)
@@ -32,12 +31,12 @@ class IntermatScrape::WeightClass
     wrestler.weight_class = self
   end
 
-  #TODO move to Wrestler class?
+  # TODO: move to Wrestler class?
   def print_wrestlers
-    @wrestlers.each.with_index { |w, i| puts "#{w.rank}\t\t#{w.name}"}
+    @wrestlers.each.with_index { |w, _i| puts "#{w.rank}\t\t#{w.name}" }
   end
 
-  #TODO move to Wrestler class?
+  # TODO: move to Wrestler class?
   def get_wrestler_by_rank(rank)
     @wrestlers.detect { |w| w.rank == rank }
   end
@@ -45,5 +44,4 @@ class IntermatScrape::WeightClass
   def self.all
     @@all
   end
-
 end
