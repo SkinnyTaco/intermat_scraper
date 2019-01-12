@@ -24,8 +24,8 @@ class IntermatScrape::Wrestler
     puts ''
     puts "----------- #{name}  ##{rank} -----------"
     puts ''
-    puts "School:           #{school}"
-    puts "Class:          #{class_standing}"
-    puts "Conference:      #{conference}"
+    puts "School:".ljust(20).concat(@school)
+    puts "Class:".ljust(20).concat(@class_standing)
+    puts "Conference:".ljust(20).concat(@conference)
   end
 end
