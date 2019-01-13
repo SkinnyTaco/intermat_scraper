@@ -26,11 +26,6 @@ class IntermatScrape::Cli
   def start
     if weight_class = choose_weight
       choose_rank(weight_class)
-      if restart?
-        start
-      else
-        choose_rank(weight_class)
-      end
     end
   end
 
@@ -93,6 +88,7 @@ class IntermatScrape::Cli
     case command
     when '1'..'20'
       weight_class.get_wrestler_by_rank(command).to_s
+      restart(weight_class)
     when 'back', 'b'
       start
     when 'exit'
@@ -100,7 +96,7 @@ class IntermatScrape::Cli
     end
   end
 
-  def restart?
+  def restart(weight_class)
     puts ''
     puts 'What would you like to do now?'
     puts 'view(v):'.colorize(:light_cyan).concat(' view another wrestler from this weight class')
@@ -114,9 +110,9 @@ class IntermatScrape::Cli
     end
     case command
     when 'view', 'v'
-      false
+      choose_rank(weight_class)
     when 'back', 'b'
-      true
+      start
     when 'exit'
       quit_scraper
     end
