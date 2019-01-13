@@ -33,7 +33,9 @@ class IntermatScrape::WeightClass
 
   # TODO: move to Wrestler class?
   def print_wrestlers
-    @wrestlers.each.with_index { |w, _i| puts "#{w.rank}\t\t#{w.name}" }
+    puts ""
+    puts "Rankings: ".colorize(:light_cyan)
+    @wrestlers.each.with_index { |w, _i| puts "#{w.rank}\t#{w.name}" }
   end
 
   # TODO: move to Wrestler class?

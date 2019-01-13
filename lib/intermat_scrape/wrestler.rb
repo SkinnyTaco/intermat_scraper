@@ -22,10 +22,10 @@ class IntermatScrape::Wrestler
 
   def to_s
     puts ''
-    puts "----------- #{name}  ##{rank} -----------"
+    puts "----------- #{name}  ##{rank} -----------".on_blue
     puts ''
-    puts "School:".ljust(20).concat(@school)
-    puts "Class:".ljust(20).concat(@class_standing)
-    puts "Conference:".ljust(20).concat(@conference)
+    puts "School:".colorize(:light_cyan).ljust(20).concat(@school)
+    puts "Class:".colorize(:light_cyan).ljust(20).concat(@class_standing)
+    puts "Conference:".colorize(:light_cyan).ljust(20).concat(@conference)
   end
 end

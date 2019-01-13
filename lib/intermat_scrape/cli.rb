@@ -35,6 +35,7 @@ class IntermatScrape::Cli
   end
 
   def quit_scraper
+    puts ''
     puts 'Thank you for using IntermatScrape!'
     exit
   end
@@ -43,6 +44,7 @@ class IntermatScrape::Cli
     weight_class = nil
     puts ''
     puts 'What weight class are you interested in?'
+    puts ''
     IntermatScrape::WeightClass.print_weights
 
     input = gets.strip
@@ -53,9 +55,10 @@ class IntermatScrape::Cli
 
     puts ''
     puts 'Type one of the following commands:'
-    puts 'rankings(r): show top 20 wrestlers'
-    puts 'back(b): return to weight classes'
-    puts 'exit: exit program'
+    puts 'rankings(r):'.colorize(:light_cyan).concat(' show top 20 wrestlers')
+    puts 'back(b):'.colorize(:light_cyan).concat(' return to weight classes')
+    puts 'exit:'.colorize(:light_cyan).concat(' exit program')
+    puts ''
     command = gets.strip.downcase
     until %w[rankings r back b exit].include?(command)
       puts 'Invalid command. Please type a valid command.'
@@ -77,9 +80,10 @@ class IntermatScrape::Cli
     weight_class.print_wrestlers
     puts ''
     puts 'Type one of the following commands:'
-    puts 'a number 1-20 to view the corresponding wrestler'
-    puts 'back(b): return to weight classes'
-    puts 'exit: exit program'
+    puts 'a number 1-20'.colorize(:light_cyan).concat(' to view the corresponding wrestler')
+    puts 'back(b):'.colorize(:light_cyan).concat(' return to weight classes')
+    puts 'exit:'.colorize(:light_cyan).concat(' exit program')
+    puts ''
     command = gets.strip.downcase
     until %w[1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 back b exit].include?(command)
       puts 'Invalid command. Please enter a valid command.'
@@ -97,10 +101,12 @@ class IntermatScrape::Cli
   end
 
   def restart?
+    puts ''
     puts 'Would you like to do now?'
-    puts 'view(v): view another wrestler from this weight class'
-    puts 'back(b): return to weight classes'
-    puts 'exit: exit program'
+    puts 'view(v):'.colorize(:light_cyan).concat(' view another wrestler from this weight class')
+    puts 'back(b):'.colorize(:light_cyan).concat(' return to weight classes')
+    puts 'exit:'.colorize(:light_cyan).concat(' exit program')
+    puts ''
     command = gets.strip.downcase
     until %w[view v back b exit].include?(command)
       puts 'Invalid command. Please type a valid command.'

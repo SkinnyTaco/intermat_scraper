@@ -1,6 +1,7 @@
 require "nokogiri"
 require "open-uri"
 require "pry"
+require "colorize"
 
 require_relative "../lib/intermat_scrape/cli"
 require_relative "../lib/intermat_scrape/scraper"
