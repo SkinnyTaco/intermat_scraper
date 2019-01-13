@@ -27,7 +27,7 @@ Gem::Specification.new do |spec|
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
-  spec.files         = ["lib/intermat_scrape/cli.rb","lib/intermat_scrape/scraper.rb","lib/intermat_scrape/weight_class.rb","lib/intermat_scrape/wrestler.rb","lib/intermat_scrape.rb", "config/environment.rb"]
+  spec.files         = ["lib/intermat_scrape/cli.rb","lib/intermat_scrape/version.rb","lib/intermat_scrape/scraper.rb","lib/intermat_scrape/weight_class.rb","lib/intermat_scrape/wrestler.rb","lib/intermat_scrape.rb", "config/environment.rb"]
 
   spec.bindir        = 'bin'
   spec.executables   << 'intermat-scrape'
