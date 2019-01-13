@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    intermat-scrape (1.1.0)
+    intermat-scrape (0.1.2)
 
 GEM
   remote: https://rubygems.org/
