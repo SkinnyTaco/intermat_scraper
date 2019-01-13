@@ -1,23 +1,8 @@
 class IntermatScrape::Wrestler
-  attr_accessor :rank, :weight_class, :school, :class_standing, :conference
-  attr_reader :name
+  attr_accessor :rank, :weight_class, :school, :class_standing, :conference, :name
 
-  def initialize(rank, name, school, class_standing, conference)
-    @rank = rank
-    @name = name
-    @school = school
-    @class_standing = class_standing
-    @conference = conference
-  end
-
-  def self.new_by_row(row)
-    new(
-      row.children[1].text,
-      row.css(':nth-child(2) a').text,
-      row.css(':nth-child(3)').text,
-      row.css(':nth-child(4)').text,
-      row.css(':nth-child(5)').text
-    )
+  def initialize(wrestler_hash)
+    wrestler_hash.each { |k, v| self.send("#{k}=", v) }
   end
 
   def to_s
