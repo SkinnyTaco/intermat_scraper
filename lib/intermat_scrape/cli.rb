@@ -102,7 +102,7 @@ class IntermatScrape::Cli
 
   def restart?
     puts ''
-    puts 'Would you like to do now?'
+    puts 'What would you like to do now?'
     puts 'view(v):'.colorize(:light_cyan).concat(' view another wrestler from this weight class')
     puts 'back(b):'.colorize(:light_cyan).concat(' return to weight classes')
     puts 'exit:'.colorize(:light_cyan).concat(' exit program')
