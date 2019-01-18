@@ -5,6 +5,7 @@ class IntermatScrape::Wrestler
     wrestler_hash.each { |k, v| self.send("#{k}=", v) }
   end
 
+  #TODO move to Cli.class
   def to_s
     puts ''
     puts "----------- #{name}  ##{rank} -----------".on_blue
