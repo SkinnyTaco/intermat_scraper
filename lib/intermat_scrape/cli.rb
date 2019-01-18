@@ -1,9 +1,9 @@
 class IntermatScrape::Cli
   def load_data
     IntermatScrape::WeightClass.create_weight_classes
-    IntermatScrape::WeightClass.all.each do |weight_class|
-      IntermatScrape::Scraper.create_wrestlers(weight_class)
-    end
+    # IntermatScrape::WeightClass.all.each do |weight_class|
+    #   IntermatScrape::Scraper.create_wrestlers(weight_class)
+    # end
   end
 
   def flow
@@ -18,7 +18,6 @@ class IntermatScrape::Cli
     puts 'Welcome to IntermatScrape, a way to delve into the top 20 ranked'
     puts '                        NCAA wrestlers.'
     puts ''
-    puts '                          LOADING...'
     puts ''
     puts '-----------------------------------------------------------------'
   end
@@ -47,6 +46,9 @@ class IntermatScrape::Cli
       puts "I don't recognize that weight class. Please try again."
       input = gets.strip
     end
+
+    weight = IntermatScrape::WeightClass.find_by_weight(input)
+    IntermatScrape::Scraper.create_wrestlers(weight) if weight.wrestlers.empty?
 
     puts ''
     puts 'Type one of the following commands:'
